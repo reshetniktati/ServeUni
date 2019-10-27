@@ -8,8 +8,9 @@
 </head>
 <body>
     <div>
-        <p>Find amount of array elements, where element (a<sub>k</sub>) truthly with statement: <br>
-            2<sub>k</sub> &lt; a<sub>k</sub> &lt; k!;
+        <p>Find amount of array elements a<sub>k</sub> that satistfy the following statement:
+        <br>
+            2<sup>k</sup> &lt; a<sub>k</sub> &lt; k!;
         </p>
     </div>
 
@@ -19,7 +20,7 @@
             if (n == 0) {
                 return 1;
             }
-            if (n == 1) {
+            else if (n == 1) {
                 return n;
 
             } else {
@@ -32,7 +33,7 @@
             if (n == 0) {
                 return 1;
             }
-            else if (n == 1){
+            else if (n == 1) {
                 return x;
 
             } else {
