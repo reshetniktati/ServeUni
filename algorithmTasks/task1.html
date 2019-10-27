@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task1</title>
+    <style>
+
+        table, td {
+            border: none;
+            border-collapse: collapse;
+        }
+
+        table {
+            vertical-align: middle;
+        }
+
+        td {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+        }
+
+        td:nth-of-type(2) {
+            padding: 0;
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <p>Find amount of array elements, where element (a<sub>k</sub>) truthly with statement:</p>
+        <table>
+            <tr>
+                <td rowspan="2">a<sub>k</sub> &lt;</td>
+                <td>a<sub>k-1</sub> + a<sub>k+1</sub></td>
+            </tr>
+            <tr>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        function findElemAmount(arr) {
+            let counter = 0;
+
+            for (let i = 1; i < arr.length - 1; i++) {
+                if (arr[i] < ((arr[i - 1] + arr[i + 1])) / 2) {
+                    counter++;
+                }
+            }
+            return(counter);
+        }
+
+        let arr = [4, 4, 102, 1, 34, 56, 546, 45, 257];
+
+        console.log(findElemAmount(arr));
+
+    </script>
+    
+</body>
+</html>
