@@ -10,8 +10,14 @@ rl.question(`Find amount of array elements that satistfy the following statement
                 \nEnter the numbers separated by a coma, please: `, (answer) => {
     
     let argsArray = answer.split(',').map((el) => {
-        return Number(el);
+        if (Number(el)) {
+            return Number(el);
+        } else {
+            console.error(`ERROR. Invalid input. "${el}" is not a number`);
+            process.exit(1);
+        }
     });
+
 
     console.log(findElemAmount(argsArray));
     rl.close();
