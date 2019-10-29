@@ -8,7 +8,14 @@ const rl = readline.createInterface({
 rl.question(`Build a Pascal triangle with n rows in it 
             \nEnter the number of triangle rows: `, (answer) => {
 
-    console.log(buildTriangle(Number(answer)));
+    if (Number(answer)) {
+        console.log(buildTriangle(Number(answer)));
+
+    } else {
+        console.error(`ERROR. Invalid input. '${answer} is not a number.`);
+        process.exit(1);
+    }
+
     rl.close();
 });
 
