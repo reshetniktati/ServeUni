@@ -32,7 +32,7 @@ function findFactorial(n) {
 
     } else {
         let result = 1;
-        
+
         for (let i = 1; i <= n; i++){
             result *= i; 
         }
@@ -48,7 +48,10 @@ function pow(x, n) {
         return x;
 
     } else {
-        return x * pow(x, n - 1);
+        for (let i = n; i > 0; i--){
+            result *= x 
+        }
+        return result;
     }
 }
 
