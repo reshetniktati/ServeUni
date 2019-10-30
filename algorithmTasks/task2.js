@@ -48,6 +48,7 @@ function pow(x, n) {
         return x;
 
     } else {
+        let result = 1;
         for (let i = n; i > 0; i--){
             result *= x 
         }
