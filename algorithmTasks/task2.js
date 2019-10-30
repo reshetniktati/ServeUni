@@ -18,19 +18,25 @@ rl.question(`Find amount of array elements that satistfy the following statement
         }
     });
 
-
     console.log(findElemAmount(argsArray));
     rl.close();
 });
 
+
 function findFactorial(n) {
     if (n === 0) {
         return 1;
+
     } else if (n === 1) {
         return n;
 
     } else {
-        return n * findFactorial(n - 1);
+        let result = 1;
+        
+        for (let i = 1; i <= n; i++){
+            result *= i; 
+        }
+        return result;
     }
 }
 
