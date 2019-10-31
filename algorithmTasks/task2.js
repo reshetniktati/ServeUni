@@ -50,7 +50,7 @@ function pow(x, n) {
     } else {
         let result = 1;
         for (let i = n; i > 0; i--){
-            result *= x 
+            result *= x; 
         }
         return result;
     }
@@ -68,3 +68,4 @@ function findElemAmount(arr) {
     return counter;
 }
 
+module.exports = findElemAmount;

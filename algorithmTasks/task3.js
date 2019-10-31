@@ -23,11 +23,11 @@ rl.question(`Build a Pascal triangle with n rows in it
 function buildTriangle(n) {
     let arr = [];
     const defNumber = 1;
+    let matrix = [];
 
     for (let i = 0; i < n; i++) {
         if (i === 0) {
             arr = [defNumber];
-            console.log(arr.join(' '));
 
         } else {
             let tempArr = [];
@@ -46,7 +46,15 @@ function buildTriangle(n) {
                 }
             }
             arr = tempArr;
-            console.log(arr.join(' '));
         }
-    }
+
+        let a = arr.join(' ').split('');
+        let row = new Array(n * 2 - 1).fill(' ');
+        row.splice((Math.floor(row.length / 2) - i), a.length, ...a );
+
+        matrix.push(row.join(''));
+        
+    } return matrix.join('\n');
 }
+
+module.exports = buildTriangle;

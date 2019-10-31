@@ -32,3 +32,5 @@ function findElemAmount(arr) {
     }
     return counter;
 }
+
+module.exports = findElemAmount;
