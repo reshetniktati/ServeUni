@@ -48,9 +48,9 @@ function buildTriangle(n) {
             arr = tempArr;
         }
 
-        let a = arr.join(' ').split('');
+        let numbersStr = arr.join(' ');
         let row = new Array(n * 2 - 1).fill(' ');
-        row.splice((Math.floor(row.length / 2) - i), a.length, ...a );
+        row.splice((n - i), numbersStr.length, ...numbersStr);
 
         matrix.push(row.join(''));
         
